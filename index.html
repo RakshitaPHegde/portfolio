@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rakshita Hegde | Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{--ink:#172119;--muted:#69736a;--green:#477a55;--lime:#d8f28d;--cream:#f7f8f2;--line:#dfe5dc;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.nav{height:76px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(247,248,242,.94);backdrop-filter:blur(12px);position:sticky;top:0;z-index:10}
+.brand{font-weight:800;display:flex;align-items:center;gap:9px}.brand span{width:31px;height:31px;display:grid;place-items:center;border-radius:8px;background:var(--ink);color:var(--lime)}
+.nav nav{display:flex;gap:28px}.nav nav a{font-size:.84rem;font-weight:600;color:var(--muted)}.nav nav a:hover{color:var(--green)}
+.navbtn{padding:9px 15px;border:1px solid #cbd4c9;border-radius:8px;background:#fff;font-size:.78rem;font-weight:700}
+.hero{min-height:calc(100vh - 76px);padding:75px 7%;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;background:radial-gradient(circle at 78% 30%,rgba(216,242,141,.4),transparent 29%),var(--cream)}
+.status{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid #d8dfd5;border-radius:30px;background:#fff;color:#617063;font:500 .72rem 'DM Mono',monospace;text-transform:uppercase}
+.status i{width:7px;height:7px;border-radius:50%;background:#5a9b68}
+.hero h1{margin:24px 0 20px;font-size:clamp(3rem,6.2vw,6.2rem);line-height:.99;letter-spacing:-4px}
+.hero h1 em{color:var(--green);font-style:normal}.hero-copy{max-width:650px;color:var(--muted);font-size:1.03rem}
+.actions{display:flex;gap:10px;margin-top:30px}.btn{padding:12px 18px;border-radius:9px;font-size:.82rem;font-weight:800;transition:.2s}.btn:hover{transform:translateY(-2px)}.dark{background:var(--ink);color:#fff}.light{border:1px solid #cbd4c9;background:#fff}
+.quick{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:32px;color:#899187;font-size:.72rem}.quick b{padding:5px 9px;border-radius:5px;background:#e9eee5;color:#53655a}
+.visual{min-height:500px;display:grid;place-items:center;position:relative}.orb{width:330px;height:330px;border-radius:50%;background:var(--lime);box-shadow:0 0 100px rgba(216,242,141,.5)}
+.code{position:absolute;width:370px;padding:25px 30px;border-radius:15px;background:#202b22;color:#dce7dc;box-shadow:0 30px 70px rgba(23,33,25,.22);transform:rotate(-4deg);font:500 1rem/2 'DM Mono',monospace}
+.dots{display:flex;gap:6px;margin-bottom:17px}.dots i{width:7px;height:7px;border-radius:50%;background:#69766b}.pink{color:#f2a6bc}.green{color:#c6ee83}.indent{padding-left:28px}
+.float{position:absolute;padding:13px 15px;border:1px solid #d7ded4;border-radius:10px;background:rgba(255,255,255,.96);box-shadow:0 15px 35px rgba(37,55,40,.1);font-size:.76rem}.float strong{display:block}.float small{color:#7a837a}.f1{top:17%;right:2%}.f2{bottom:15%;left:0}
+.section{padding:110px 7%;max-width:1250px;margin:auto}.label{font:500 .72rem 'DM Mono',monospace;color:var(--green);letter-spacing:1px}
+.section h2{margin-top:9px;font-size:clamp(2.4rem,4.5vw,4rem);line-height:1.05;letter-spacing:-2px}.section h2 span{color:var(--green)}
+.about{border-top:1px solid var(--line)}.aboutgrid{margin-top:50px;display:grid;grid-template-columns:1.15fr .85fr;gap:90px}.aboutgrid p{color:#536057;margin-bottom:20px}.aboutgrid .big{font-size:1.28rem}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}.facts div{padding:14px;border-top:1px solid #ccd5ca}.facts strong{display:block}.facts small{color:#879087}
+.projects{max-width:none;background:#edf2e9}.projectlist{max-width:1100px;margin-top:50px}.project{padding:29px 0;border-top:1px solid #cfd9cc}.project:last-child{border-bottom:1px solid #cfd9cc}.ptop,.pbody{display:flex;justify-content:space-between;gap:25px}.ptop{font:500 .68rem 'DM Mono',monospace;color:#718073}.pbody{margin-top:20px}.pbody h3{font-size:2rem;letter-spacing:-1px}.pbody p{max-width:720px;color:#667268;margin-top:7px}.arrow{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;border:1px solid #c8d2c5;border-radius:50%;background:#fff}.tags{display:flex;gap:7px;margin-top:20px}.tags span{padding:4px 9px;border-radius:4px;background:#e0e9dc;color:#607060;font-size:.68rem}
+.skills{border-top:1px solid var(--line)}.skillgrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px;margin-top:50px}.skillgrid p{color:var(--muted)}.note{margin-top:28px;padding-left:14px;border-left:2px solid var(--lime);font-size:.76rem;color:#7b847b}.cloud{display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start}.cloud span{padding:12px 16px;border:1px solid #d2dad0;border-radius:8px;background:#fff;color:#48544b;font-size:.82rem;font-weight:600}.cloud span:nth-child(3n){background:#e9f1e4}
+.coding{max-width:none;background:var(--ink);color:#fff}.codingin{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:50px}.coding .label{color:var(--lime)}.coding h2{margin:12px 0 18px;font-size:clamp(2.4rem,5vw,4.5rem);line-height:1.02}.coding p{max-width:600px;color:#aab7ad}.circle{width:145px;height:145px;flex:0 0 145px;display:grid;place-items:center;border-radius:50%;background:var(--lime);color:var(--ink);font-size:.82rem;font-weight:800;transition:.25s}.circle:hover{transform:rotate(-8deg) scale(1.04)}
+.contact{text-align:center}.contact h2{margin-bottom:12px}.contact>p{color:var(--muted)}.links{max-width:850px;margin:45px auto 0;border-top:1px solid var(--line)}.links a{display:grid;grid-template-columns:45px 1fr 30px;padding:20px 5px;border-bottom:1px solid var(--line);text-align:left;font-weight:700;transition:.2s}.links a:hover{color:var(--green);padding-left:14px}.links small{font:500 .65rem 'DM Mono',monospace;color:#8b948a}.links b{text-align:right}
+footer{padding:22px 7%;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#7a847a;font:500 .68rem 'DM Mono',monospace}
+@media(max-width:850px){.nav{padding:0 5%}.nav nav{display:none}.hero{grid-template-columns:1fr;padding:65px 6%}.hero h1{letter-spacing:-2.5px}.visual{min-height:390px}.aboutgrid,.skillgrid{grid-template-columns:1fr;gap:45px}.codingin{flex-direction:column;align-items:flex-start}}
+@media(max-width:550px){.navbtn{display:none}.visual{transform:scale(.82);margin:-25px 0}.section{padding:80px 6%}.facts{grid-template-columns:1fr}.circle{width:110px;height:110px;flex-basis:110px}footer{flex-direction:column;gap:6px}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#home"><span>R</span>Rakshita</a>
+  <nav><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+  <a class="navbtn" href="https://www.linkedin.com/in/rakshita-p-hegde" target="_blank">LinkedIn ↗</a>
+</header>
+
+<section id="home" class="hero">
+  <div>
+    <div class="status"><i></i>CSE Student · Learning & Building</div>
+    <h1>Hi, I'm <em>Rakshita.</em><br>I build while I learn.</h1>
+    <p class="hero-copy">Computer Science and Engineering student at Dayananda Sagar College of Engineering, exploring programming, web development, Android, AI and problem solving.</p>
+    <div class="actions"><a class="btn dark" href="#projects">See my projects ↓</a><a class="btn light" href="https://github.com/RakshitaPHegde" target="_blank">GitHub ↗</a></div>
+    <div class="quick"><span>Currently learning</span><b>DSA</b><b>Android</b><b>RAG / AI</b></div>
+  </div>
+  <div class="visual">
+    <div class="orb"></div>
+    <div class="code"><div class="dots"><i></i><i></i><i></i></div><span class="pink">class</span> <span class="green">Rakshita</span> {<br><span class="indent"><span class="pink">learn</span>();</span><br><span class="indent"><span class="pink">build</span>();</span><br><span class="indent"><span class="pink">improve</span>();</span><br>}</div>
+    <div class="float f1">💻 <strong>Projects</strong><small>Learning by doing</small></div>
+    <div class="float f2">✦ <strong>Problem Solving</strong><small>LeetCode practice</small></div>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <span class="label">01 — ABOUT</span><h2>A little about me<span>.</span></h2>
+  <div class="aboutgrid">
+    <div class="big"><p>I’m <strong>Rakshita Hegde</strong>, a Computer Science and Engineering student at Dayananda Sagar College of Engineering.</p><p>I enjoy learning by building things and solving problems step by step. I’m currently exploring programming, web development, Android development, and problem solving.</p></div>
+    <div><p>I’m still growing as a developer. My goal is simple: keep learning, build meaningful projects, and become better at solving real-world problems.</p><div class="facts"><div><strong>CSE</strong><small>Student</small></div><div><strong>DSCE</strong><small>College</small></div><div><strong>2026</strong><small>Learning year</small></div></div></div>
+  </div>
+</section>
+
+<section id="projects" class="section projects">
+  <span class="label">02 — PROJECTS</span><h2>Things I've been building<span>.</span></h2>
+  <div class="projectlist">
+    <article class="project"><div class="ptop"><span>01</span><span>Android · RAG · AI</span></div><div class="pbody"><div><h3>DocMindAI</h3><p>A mobile application project exploring Retrieval-Augmented Generation (RAG) for working with documents and answering questions from their content.</p></div><a class="arrow" href="https://github.com/RakshitaPHegde" target="_blank">↗</a></div><div class="tags"><span>Android</span><span>RAG</span><span>AI</span></div></article>
+    <article class="project"><div class="ptop"><span>02</span><span>Web · Social Impact</span></div><div class="pbody"><div><h3>Food Connect</h3><p>A food waste reduction project designed to connect restaurants and hotels with NGOs so surplus fresh food can be collected instead of being wasted.</p></div><a class="arrow" href="https://github.com/RakshitaPHegde" target="_blank">↗</a></div><div class="tags"><span>Web Development</span><span>Google Sites</span><span>SDG</span></div></article>
+  </div>
+</section>
+
+<section id="skills" class="section skills">
+  <span class="label">03 — SKILLS</span><h2>Learning & growing<span>.</span></h2>
+  <div class="skillgrid"><div><p>These are the technologies and areas I have been learning and working with as a student.</p><div class="note">No expert claims — just things I'm genuinely learning and practicing.</div></div><div class="cloud"><span>C</span><span>C++</span><span>Java</span><span>Python</span><span>HTML & CSS</span><span>JavaScript</span><span>Android</span><span>Git & GitHub</span><span>DSA</span><span>RAG / AI</span></div></div>
+</section>
+
+<section class="section coding">
+  <div class="codingin"><div><span class="label">04 — PROBLEM SOLVING</span><h2>Learning to think<br>one problem at a time.</h2><p>I use LeetCode to practice programming and improve my problem-solving skills. I'm focusing on consistency and understanding rather than just numbers.</p></div><a class="circle" href="https://leetcode.com/u/RakshitaPHegde/" target="_blank">LeetCode ↗</a></div>
+</section>
+
+<section id="contact" class="section contact">
+  <span class="label">05 — CONNECT</span><h2>Let's stay connected<span>.</span></h2><p>Follow my work and learning journey.</p>
+  <div class="links"><a href="https://www.linkedin.com/in/rakshita-p-hegde" target="_blank"><small>01</small>LinkedIn<b>↗</b></a><a href="https://github.com/RakshitaPHegde" target="_blank"><small>02</small>GitHub<b>↗</b></a><a href="https://leetcode.com/u/RakshitaPHegde/" target="_blank"><small>03</small>LeetCode<b>↗</b></a></div>
+</section>
+<footer><span>Rakshita Hegde</span><span>Built while learning · 2026</span></footer>
+</body>
+</html>
